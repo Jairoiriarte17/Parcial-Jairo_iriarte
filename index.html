@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>1er Parcial</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Sabores del Sinú - Gestión de Pedidos</h1>
+
+    <!-- Formulario de creación de pedido -->
+    <form id="pedido-form">
+        <label for="cedula-cliente">Cédula del Cliente:</label>
+        <input type="text" id="cedula-cliente" required>
+        
+        <label for="productos">Productos:</label>
+        <select id="productos" required>
+            <option value="mote-de-queso">Mote de Queso</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="guarniciones">Guarniciones</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" min="1" required>
+
+        <button type="button" onclick="agregarPedido()">Agregar Pedido</button>
+    </form>
+
+    <!-- Listado de Pedidos -->
+    <h2>Listado de Pedidos:</h2>
+    <div id="listado-pedidos"></div>
+
+    <!-- Listado de Pedidos del Cliente -->
+    <h2>Listado de Pedidos del Cliente</h2>
+    <label for="cedula-cliente-lista">Cédula del Cliente:</label>
+    <input type="text" id="cedula-cliente-lista" required>
+    <button type="button" onclick="mostrarPedidosCliente()">Listar Pedidos</button>
+    <div id="listado-pedidos-cliente"></div>
+
+    <!-- Listado de Pedidos Ordenados por Valor -->
+    <h2>Listado de Pedidos Ordenados por Valor</h2>
+    <button type="button" onclick="mostrarPedidosOrdenados()">Listar Pedidos Ordenados</button>
+    <div id="listado-pedidos-ordenados"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
